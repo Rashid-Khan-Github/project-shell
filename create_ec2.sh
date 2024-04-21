@@ -14,6 +14,7 @@ do
         INSTANCE_TYPE="t3.medium"
     else
         INSTANCE_TYPE="t3.micro"
+    fi
 
     IP_ADDRESS=(aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE
     --security-group-ids $SECURITY_GROUP_ID
