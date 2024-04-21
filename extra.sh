@@ -1,7 +1,10 @@
 location /api/shipping/ { proxy_pass http://shipping.bsebregistration.com:8080/; }
 location /api/payment/ { proxy_pass http://payment.bsebregistration.com:8080/; }
 
-aws ec2 run-instances --image-id ami-0f3c7d07486cad139 --instance-type t2.micro --security-group-ids sg-03e2563eefcedfe47
+aws ec2 run-instances --image-id ami-0f3c7d07486cad139 --instance-type t2.micro
+ --security-group-ids sg-03e2563eefcedfe47
+ --tag-specifications resourceType=Instance, Tags= [{Key=Name, Value=$i}]
+
 
 
 
