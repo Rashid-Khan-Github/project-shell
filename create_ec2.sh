@@ -2,7 +2,7 @@
 
 NAMES=("mongodb" "catalogue" "redis" "user" "cart" "mysql" "shipping" "rabbitmq" "payment")
 
-for i in "${NAMES[$@]}"
+for i in "${NAMES[@]}"
 do
     echo "Service Name -> $i"
 
